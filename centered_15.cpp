@@ -4,18 +4,7 @@ using namespace std;
 
 int isCentered5(int a[], int len) {
         if(len < 3) return 0;
-        int i, j, sum, center, left = 1;
-
-        // for(i = 1; i <len - 1; i++, left++) {
-        //     center = 0;
-        //     sum = 0;
-        //     for(j = i; j < len -1; j++) {
-        //         sum += a[j];
-        //         ++center;
-        //         if(sum == 15 && left == (a.length - left - center)) {return 1};
-        //         else if(sum > 15) {break};
-        //     }
-        // }
+        int i, j, sum, left = 1;
 
         for(i = 1; i < len - 1; i++, left++) {
             sum = 0;
@@ -31,7 +20,7 @@ int isCentered5(int a[], int len) {
     }
 
 int main () {
- int a[] = {2, 10, 4, 1, 6, 9};
+ int a[] = {3, 2, 10, 4, 1, 6};
  int len = sizeof(a)/sizeof(a[0]);
   
  cout << isCentered5(a, len) << endl;
